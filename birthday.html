@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Birthday Decoration — Shiv Shakti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    :root{--primary:#ff2f93;--bg:#fff7fb;--shadow:0 12px 40px rgba(11,10,17,0.06)}
+    *{box-sizing:border-box}body{font-family:'Poppins',sans-serif;margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:#111}
+    header{background:linear-gradient(90deg,var(--primary),#ff78b7);color:#fff;padding:12px 18px;display:flex;justify-content:space-between}
+    .container{max-width:1100px;margin:20px auto;padding:0 18px}
+    .hero img{width:100%;height:360px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
+    .card{background:#fff;padding:16px;border-radius:12px;box-shadow:var(--shadow);margin-bottom:12px}
+    .packages{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--primary),#ff85c2);color:#fff;font-weight:700;border:none;cursor:pointer}
+    @media(max-width:900px){.hero img{height:220px}}
+  </style>
+</head>
+<body>
+  <header><div style="display:flex;gap:12px;align-items:center"><div style="width:48px;height:48px;border-radius:10px;background:#fff;color:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:800">SS</div><div><strong>Birthday Decoration</strong></div></div><nav><a href="index.html" style="color:#fff">Home</a></nav></header>
+
+  <main class="container">
+    <section class="hero"><img src="birthday_banner.jpg" alt="Birthday banner"></section>
+
+    <section class="card">
+      <h1 style="color:var(--primary)">Birthday Themes & Decor</h1>
+      <p>We make fun and memorable birthday setups for every age — balloon arches, themed backdrops, cake tables and photo corners.</p>
+    </section>
+
+    <section>
+      <h2>Packages</h2>
+      <div class="packages">
+        <div class="card"><h4>Basic</h4><div style="font-weight:800;color:#f6c85f">₹5,000</div><p>Balloon arch & backdrop.</p></div>
+        <div class="card"><h4>Premium</h4><div style="font-weight:800;color:#f6c85f">₹12,000</div><p>Theme setup, lighting & props.</p></div>
+        <div class="card"><h4>Royal</h4><div style="font-weight:800;color:#f6c85f">₹25,000</div><p>Full hall decor & premium props.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="birthday1.jpg" alt="">
+        <img src="birthday2.jpg" alt="">
+        <img src="birthday3.jpg" alt="">
+        <img src="birthday4.jpg" alt="">
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Payment & Booking</h3>
+      <p>UPI ID: <strong>shivshaktiflora@upi</strong></p>
+      <img src="upi_qr.jpg" alt="UPI QR" style="width:160px;border-radius:8px">
+      <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn" href="upi://pay?pa=shivshaktiflora@upi&pn=Shiv%20Shakti&cu=INR">Pay via UPI</a>
+        <button class="btn" onclick="alert('Card demo')">Card</button>
+        <button class="btn" onclick="alert('Net-banking demo')">Net Banking</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Contact</h3>
+      <form action="https://formspree.io/f/placeholder" method="POST" onsubmit="setTimeout(()=>{window.location='thankyou.html'},400)">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="tel" name="phone" placeholder="Phone" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="date" name="event_date" required>
+        <textarea name="message" rows="3" placeholder="Event details"></textarea>
+        <input type="hidden" name="service" value="Birthday">
+        <button class="btn" type="submit">Send Inquiry</button>
+      </form>
+    </section>
+  </main>
+
+  <footer style="padding:18px;text-align:center;color:#666">© <span id="yrb"></span> Shiv Shakti Flower Decoration</footer>
+  <script>document.getElementById('yrb').textContent=new Date().getFullYear();</script>
+</body>
+</html>
